@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clubr — Berkeley Club Recruiting Directory
 
-## Getting Started
+A structured directory of 48+ UC Berkeley student organizations built to fix
+information asymmetry in club recruiting — specifically how it hits first-gen
+and transfer students hardest.
 
-First, run the development server:
+**[Live Site](https://clubr.vercel.app)** · **[LinkedIn](https://linkedin.com/in/gearoidwalsh)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The Problem
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The students who know which clubs are worth applying to, what the process
+actually looks like, and how to position themselves are almost always the ones
+who already have a friend, a sibling, or a contact who has been through it.
+Everyone else is guessing. Clubr makes that baseline information available to
+everyone, regardless of who they know.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## What It Does
 
-To learn more about Next.js, take a look at the following resources:
+- 48+ club profiles covering selectivity, commitment, application steps, and insider tips
+- Deadline Radar — urgency indicators for clubs with open applications
+- Quick Save — bookmark clubs across sessions via localStorage
+- Personalized sorting — transfer students see transfer-friendly clubs first
+- Keyboard navigation — `/` to focus search
+- Real-time tip feed via Supabase
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+| Layer | Tools |
+|---|---|
+| Frontend | Next.js 14 (App Router), TypeScript, Tailwind CSS |
+| Animation | Framer Motion, Embla Carousel |
+| Backend | Supabase (PostgreSQL) |
+| Analytics | Vercel Analytics |
+| Deployment | Vercel |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Product Decisions
+
+**Why I cut peer reviews in v1**
+Anonymous reviews would recreate the exact bias I was trying to eliminate.
+Early reviews skew toward people with strong reactions — rejected applicants
+or insiders managing reputation. Structured, researched profiles are less
+dynamic but more honest. I'll revisit once there's enough of a user base
+for the signal to be meaningful.
+
+**Why return visits is the north star metric**
+A student who comes back to Clubr twice in a two-week window is using it as
+a genuine research tool, not just browsing once out of curiosity. That
+behavior — return visits tied to an active decision — is the clearest signal
+the information is actually changing how people navigate recruiting.
+
+**Why I prioritized the directory over application tracking**
+An application tracker only works if the directory is good first. Students
+won't track applications in a tool they don't trust. Getting the core
+information layer right was the prerequisite for everything else.
+
+---
+
+Built by [Gearóid Walsh](https://linkedin.com/in/gearoidwalsh) · UC Berkeley Haas, Class of 2027  
+A Voyager Consulting × Cal project

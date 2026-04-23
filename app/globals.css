@@ -1,26 +1,163 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
+@utility animate-spotlight {
+  animation: spotlight 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+:root {
+  /* Backgrounds */
+  --bg-base: #000000;
+  --bg-card: #0a0a0a;
+  --bg-elevated: #111111;
+  --bg-hover: #181818;
+
+  /* Text */
+  --text-primary: #f0f0f0;
+  --text-secondary: #888888;
+  --text-muted: #444444;
+
+  /* Primary accent — coral */
+  --coral: #ff6b6b;
+  --coral-bright: #ff8c8c;
+  --coral-dim: #e05555;
+  --coral-glow: rgba(255, 107, 107, 0.15);
+  --coral-glow-strong: rgba(255, 107, 107, 0.3);
+
+  /* Countdown accent */
+  --teal: #2dd4bf;
+  --teal-glow: rgba(45, 212, 191, 0.15);
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 107, 107, 0.3);
+
+  --bp-bg: var(--bg-base);
+  --bp-surface: var(--bg-card);
+  --bp-accent: var(--coral);
+  --bp-gold: var(--coral);
+  --bp-text: var(--text-primary);
+  --bp-muted: var(--text-secondary);
+  --bp-border: var(--border-default);
+}
+
+@theme inline {
+  --color-background: var(--bg-base);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+
+  --color-coral: #ff6b6b;
+  --color-coral-bright: #ff8c8c;
+  --color-coral-dim: #e05555;
+  --color-coral-glow: rgba(255, 107, 107, 0.15);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  color: #f0f0f0;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Keyboard focus — visible ring without fighting custom cursor */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-color: var(--coral);
+}
+
+p {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.font-stat {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(255, 107, 107, 0.35);
+  color: var(--text-primary);
+}
+
+.bg-space-hero,
+.bg-space-section {
+  background: #000000;
+}
+
+.bg-space-card {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bg-space-card:hover {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(255, 107, 107, 0.04) 0%, transparent 70%),
+    linear-gradient(135deg, rgba(17, 17, 17, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
+  border-color: var(--border-hover);
+}
+
+.container-width {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.section-padding {
+  padding-block: 5rem;
+}
+
+.soft-card {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.soft-card:hover {
+  border-color: rgba(255, 107, 107, 0.2);
+  transform: translateY(-2px);
 }
