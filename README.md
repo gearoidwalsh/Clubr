@@ -4,7 +4,7 @@ A structured directory of 48+ UC Berkeley student organizations built to fix
 information asymmetry in club recruiting — specifically how it hits first-gen
 and transfer students hardest.
 
-**[Live Site](https://clubr.vercel.app)** · **[LinkedIn](https://linkedin.com/in/gearoidwalsh)**
+**[Live Site](https://clubr-six.vercel.app)** · **[LinkedIn](https://linkedin.com/in/gearoidwalsh)**
 
 ---
 
