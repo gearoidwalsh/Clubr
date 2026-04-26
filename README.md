@@ -63,5 +63,5 @@ information layer right was the prerequisite for everything else.
 
 ---
 
-Built by [Gearóid Walsh](https://linkedin.com/in/gearoidwalsh) · UC Berkeley Haas, Class of 2027  
+Built by [Gearóid Walsh](https://linkedin.com/in/gearoid-walsh) · UC Berkeley Haas, Class of 2027  
 A Voyager Consulting × Cal project
