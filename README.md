@@ -14,7 +14,7 @@ The students who know which clubs are worth applying to, what the process
 actually looks like, and how to position themselves are almost always the ones
 who already have a friend, a sibling, or a contact who has been through it.
 Everyone else is guessing. Clubr makes that baseline information available to
-everyone, regardless of who they know.
+everyone, regardless of whoever they know.
 
 ---
 
