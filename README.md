@@ -1,8 +1,8 @@
 # Clubr — Berkeley Club Recruiting Directory
 
 A structured directory of 48+ UC Berkeley student organizations built to fix
-information asymmetry in club recruiting — specifically how it hits first-gen
-and transfer students hardest.
+information asymmetry in club recruiting — specifically targeting first-gen
+and transfer students who navigated the same barriers I did.
 
 **[Live Site](https://clubr-six.vercel.app)** · **[LinkedIn](https://linkedin.com/in/gearoidwalsh)**
 
