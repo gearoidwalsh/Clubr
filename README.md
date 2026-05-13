@@ -6,6 +6,7 @@ and transfer students who navigated the same barriers I did.
 
 **[Live Site](https://clubr-six.vercel.app)** · **[LinkedIn](https://linkedin.com/in/gearoidwalsh)**
 
+Personal Website/Contact : https://personal-website-five-ashen.vercel.app/
 ---
 
 ## The Problem
